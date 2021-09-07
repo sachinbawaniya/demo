@@ -1,0 +1,21 @@
+<mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Country</mat-label>
+    <input matInput aria-label="Country" [matAutocomplete]="auto" [formControl]="countryCtrl">
+    <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let country of filteredCountries | async" [value]="country.name">
+            <span>{{country.name}}</span> |
+            <small>Code: {{country.code}}</small>
+        </mat-option>
+    </mat-autocomplete>
+</mat-form-field>
+
+<mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Location</mat-label>
+    <input matInput aria-label="Location" [matAutocomplete]="autoLocation" [formControl]="locationCtrl">
+    <mat-autocomplete #autoLocation="matAutocomplete">
+        <mat-option *ngFor="let location of filteredLocations | async" [value]="location.name">
+            <span>{{location.name}}</span> |
+            <!-- <small>Code: {{country.code}}</small> -->
+        </mat-option>
+    </mat-autocomplete>
+</mat-form-field>
