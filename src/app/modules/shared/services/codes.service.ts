@@ -8,7 +8,7 @@ import { EnvironmentSpecificService } from './environment-specific.service';
   providedIn: 'root',
 })
 export class CodesService {
-  
+
   private _apiBasePath: string;
 
   constructor(
@@ -22,10 +22,6 @@ export class CodesService {
   init(caller: any, envConfig: EnvConfigModel) {
     const thisCaller = caller as CodesService;
     thisCaller._apiBasePath = envConfig.APIBasePath;
-  }
-
-  getCountries(): Observable<any> {
-    return this.http.get(this._apiBasePath + '/codes/countries')
   }
 
   getLocations(): Observable<any> {

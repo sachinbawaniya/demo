@@ -11,6 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatToolbarModule } from '@angular/material';
 
 @NgModule({
     imports: [
@@ -23,7 +24,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
         MatCardModule,
         MatIconModule,
         MatButtonModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        MatToolbarModule
     ],
     exports: [
         MatPaginatorModule,
@@ -35,7 +37,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
         MatCardModule,
         MatIconModule,
         MatButtonModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+      MatToolbarModule
     ]
 })
 

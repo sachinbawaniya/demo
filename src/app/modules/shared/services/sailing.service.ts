@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { EnvConfigModel } from '../models/env-config.model';
 import { EnvironmentSpecificService } from './environment-specific.service';
 
@@ -24,8 +25,9 @@ export class SailingService {
     thisCaller._apiBasePath = envConfig.APIBasePath;
   }
 
-  getSailing(): Observable<any> {
-    return of(1)
+  getSailingSchedules(fromLocation: string, toLocation: string): Observable<any> {
+    return this.http.get(this._apiBasePath + '/schedules',
+      { params: { from: fromLocation, to: toLocation } });
   }
 
 }

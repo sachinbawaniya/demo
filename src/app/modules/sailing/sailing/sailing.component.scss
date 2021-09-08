@@ -1,0 +1,68 @@
+.sailing-container {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.mat-card {
+  padding: 24px;
+}
+
+.mat-card-actions {
+  margin: 0 !important;
+  padding: 0;
+}
+
+mat-form-field {
+  padding-right: 16px;
+}
+
+.required-field {
+  color: red;
+  margin-right: 4px;
+}
+
+.sailing-schedule-table {
+  margin-top: 24px;
+}
+
+.mat-table {
+  width: 100%;
+}
+
+td {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+mat-toolbar-row {
+  height: 48px;
+  padding: 0;
+}
+
+mat-toolbar {
+  min-height: 56px;
+  justify-content: center;
+}
+
+.mat-paginator {
+  width: 100%;
+}
+
+.no-record-found-div {
+  font-size: 18px;
+  color: lightgray;
+  padding: 0 24px;
+  width: 100%;
+  text-align: center;
+}
+
+.view-icon {
+  height: 18px;
+  width: 18px;
+  font-size: 18px;
+  display: flex;
+  color: lightgray;
+}
